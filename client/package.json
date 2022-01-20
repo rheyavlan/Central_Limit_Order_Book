@@ -1,0 +1,28 @@
+{
+  "name": "centrallimitorderclient",
+  "version": "1.0.0",
+  "description": "Client for central limit order book",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "echo : no start command specified"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rheyavlan/CentralLimitOrderBook.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "express",
+    "client",
+    "order"
+  ],
+  "author": "Rheya Vithalani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rheyavlan/CentralLimitOrderBook/issues"
+  },
+  "homepage": "https://github.com/rheyavlan/CentralLimitOrderBook#readme",
+  "proxy": "http://localhost:3001/"
+}

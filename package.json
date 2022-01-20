@@ -1,0 +1,38 @@
+{
+  "name": "centrallimitorderbook",
+  "version": "1.0.1",
+  "description": "A central limit order book (CLOB) for trading stocks ",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm run start",
+    "server": "nodemon server.js",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "test": "mocha --recursive --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rheyavlan/CentralLimitOrderBook.git"
+  },
+  "keywords": [
+    "limit",
+    "order",
+    "trades",
+    "node",
+    "js",
+    "express",
+    "stocks"
+  ],
+  "author": "Rheya Vithalani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rheyavlan/CentralLimitOrderBook/issues"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "homepage": "https://github.com/rheyavlan/CentralLimitOrderBook#readme"
+}

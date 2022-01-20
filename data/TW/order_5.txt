@@ -1,0 +1,4 @@
+Buy 99.5 100 trader1
+Buy 99.45 300 trader2
+Buy 99.35 500 trader3
+Sell 99.3 1000 trader4 
