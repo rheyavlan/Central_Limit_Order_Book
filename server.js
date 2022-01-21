@@ -12,10 +12,14 @@ const fs = require('fs');
 const { Transform } = require('stream');
 
 const config = require('./config/config.js');
+const port = process.env.PORT || 3001;
 
-app.get('/clob', (req, res) => {
+const bodyParser = require("body-parser");
+const urlencodedParser = bodyParser.urlencoded({ extended: false })  
+
+app.get('/api', (req, res) => {
   //Read stream to read the data stored in files 
-    const stream = fs.createReadStream('./data/TW/order_5.txt');
+    const stream = fs.createReadStream('./data/TW/order_1.txt');
 
     //console.log("Stream : ", stream);
   
@@ -65,14 +69,24 @@ app.get('/clob', (req, res) => {
       .pipe(res);
   });
 
-//Response to any random route
-app.get('*', (req, res) => {
-    res.send('I do not know that path!');
-})  
+app.post('/', urlencodedParser,(req, res) => {
+    console.log("req : ", req.body);
+    order = {
+      type: req.body.type,
+      price: req.body.price,
+      quantity: req.body.quantity,
+      user: req.body.user
+    }
   
+    //res.status(200).send((req.query.user).toString());
+    res.status(200).json(order);
+  
+})
+  
+
 //Start listening to the mentioned port
-app.listen(config.port, () => {
-    console.log(`Listening on port = ${config.port}`)
+app.listen(port, () => {
+    console.log(`Listening on port = ${port}`)
 });
   
   

@@ -28,7 +28,9 @@
     "url": "https://github.com/rheyavlan/CentralLimitOrderBook/issues"
   },
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "react-scripts": "3.0.1",
+    "body-parser": "^1.19.1"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
